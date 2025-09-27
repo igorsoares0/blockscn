@@ -1,6 +1,8 @@
 import type { Block, ColorVariant } from '@/types'
 import { SimpleHero } from './SimpleHero'
 import { OliveDarkHero } from './OliveDarkHero'
+import { GradientHero } from './GradientHero'
+import { GradientHeroOlive } from './GradientHeroOlive'
 import { SimpleNavbar } from './SimpleNavbar'
 import { FeatureCard } from './FeatureCard'
 import { Code, Heart, Lightning } from '@phosphor-icons/react'
@@ -15,6 +17,9 @@ export function BlockPreview({ block, variant }: BlockPreviewProps) {
     switch (block.id) {
       case 'hero-simple':
         return variant?.id === 'olive-dark' ? <OliveDarkHero /> : <SimpleHero />
+
+      case 'hero-gradient':
+        return variant?.id === 'olive-dark' ? <GradientHeroOlive /> : <GradientHero />
 
       case 'navbar-simple':
         return <SimpleNavbar />
