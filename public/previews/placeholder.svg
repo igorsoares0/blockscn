@@ -1,0 +1,10 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="200" fill="#F8F9FA"/>
+  <rect x="1" y="1" width="398" height="198" stroke="#E5E7EB" stroke-width="2" stroke-dasharray="8 8"/>
+  <text x="200" y="100" text-anchor="middle" fill="#6B7280" font-family="system-ui" font-size="14" font-weight="500">
+    Preview Image
+  </text>
+  <text x="200" y="120" text-anchor="middle" fill="#9CA3AF" font-family="system-ui" font-size="12">
+    400 × 200
+  </text>
+</svg>
