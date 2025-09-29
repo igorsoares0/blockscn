@@ -4,6 +4,8 @@ import { OliveDarkHero } from './OliveDarkHero'
 import { GradientHero } from './GradientHero'
 import { GradientHeroOlive } from './GradientHeroOlive'
 import { SimpleNavbar } from './SimpleNavbar'
+import { SimpleFooter } from './SimpleFooter'
+import { SimpleFooterOlive } from './SimpleFooterOlive'
 import { FeatureCard } from './FeatureCard'
 import { Code, Heart, Lightning } from '@phosphor-icons/react'
 
@@ -23,6 +25,9 @@ export function BlockPreview({ block, variant }: BlockPreviewProps) {
 
       case 'navbar-simple':
         return <SimpleNavbar />
+
+      case 'footer-simple':
+        return variant?.id === 'olive-dark' ? <SimpleFooterOlive /> : <SimpleFooter />
 
       case 'feature-card':
         return (
