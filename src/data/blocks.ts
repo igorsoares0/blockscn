@@ -297,7 +297,45 @@ export const blocks: Block[] = [
     dependencies: [],
     created: new Date('2024-01-01'),
     updated: new Date('2024-01-01'),
-    featured: true
+    featured: true,
+    variants: [
+      {
+        id: 'olive-dark',
+        name: 'Olive & Dark',
+        colors: {
+          primary: '#222222',
+          secondary: '#4e593e',
+          background: '#4e593e',
+          text: '#ffffff'
+        },
+        code: `export function SimpleNavbar() {
+  return (
+    <nav className="bg-[#4e593e] border-b border-[#222222]/20">
+      <div className="px-4 mx-auto max-w-7xl">
+        <div className="flex justify-between items-center py-4">
+          <div className="flex items-center">
+            <span className="text-xl font-bold text-white">
+              ShadCN Forge
+            </span>
+          </div>
+          <div className="hidden md:flex items-center space-x-8">
+            <a href="#" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
+              Home
+            </a>
+            <a href="#" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
+              Blocks
+            </a>
+            <a href="#" className="text-sm font-medium text-gray-300 hover:text-white transition-colors">
+              About
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  )
+}`
+      }
+    ]
   },
   {
     id: 'footer-simple',
@@ -583,7 +621,38 @@ export const blocks: Block[] = [
     preview: '/previews/placeholder.svg',
     dependencies: [],
     created: new Date('2024-01-01'),
-    updated: new Date('2024-01-01')
+    updated: new Date('2024-01-01'),
+    variants: [
+      {
+        id: 'olive-dark',
+        name: 'Olive & Dark',
+        colors: {
+          primary: '#222222',
+          secondary: '#4e593e',
+          background: '#4e593e',
+          text: '#ffffff'
+        },
+        code: `export function FeatureCard({ icon, title, description }: {
+  icon: React.ReactNode
+  title: string
+  description: string
+}) {
+  return (
+    <div className="p-6 rounded-lg border border-[#222222]/20 bg-[#4e593e]">
+      <div className="w-12 h-12 rounded-lg bg-[#222222]/20 flex items-center justify-center mb-4">
+        {icon}
+      </div>
+      <h3 className="text-lg font-semibold text-white mb-2">
+        {title}
+      </h3>
+      <p className="text-gray-300">
+        {description}
+      </p>
+    </div>
+  )
+}`
+      }
+    ]
   }
 ]
 

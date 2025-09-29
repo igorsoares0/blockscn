@@ -4,9 +4,11 @@ import { OliveDarkHero } from './OliveDarkHero'
 import { GradientHero } from './GradientHero'
 import { GradientHeroOlive } from './GradientHeroOlive'
 import { SimpleNavbar } from './SimpleNavbar'
+import { SimpleNavbarOlive } from './SimpleNavbarOlive'
 import { SimpleFooter } from './SimpleFooter'
 import { SimpleFooterOlive } from './SimpleFooterOlive'
 import { FeatureCard } from './FeatureCard'
+import { FeatureCardOlive } from './FeatureCardOlive'
 import { Code, Heart, Lightning } from '@phosphor-icons/react'
 
 interface BlockPreviewProps {
@@ -24,12 +26,35 @@ export function BlockPreview({ block, variant }: BlockPreviewProps) {
         return variant?.id === 'olive-dark' ? <GradientHeroOlive /> : <GradientHero />
 
       case 'navbar-simple':
-        return <SimpleNavbar />
+        return variant?.id === 'olive-dark' ? <SimpleNavbarOlive /> : <SimpleNavbar />
 
       case 'footer-simple':
         return variant?.id === 'olive-dark' ? <SimpleFooterOlive /> : <SimpleFooter />
 
       case 'feature-card':
+        if (variant?.id === 'olive-dark') {
+          return (
+            <div className="p-8 bg-[#4e593e]/20">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <FeatureCardOlive
+                  icon={<Code className="h-6 w-6 text-white" weight="duotone" />}
+                  title="Clean Code"
+                  description="Well-structured, readable code that follows best practices and conventions."
+                />
+                <FeatureCardOlive
+                  icon={<Lightning className="h-6 w-6 text-white" weight="duotone" />}
+                  title="Fast Performance"
+                  description="Optimized components that load quickly and provide smooth user experience."
+                />
+                <FeatureCardOlive
+                  icon={<Heart className="h-6 w-6 text-white" weight="duotone" />}
+                  title="Easy to Use"
+                  description="Simple copy-paste components that work out of the box with minimal setup."
+                />
+              </div>
+            </div>
+          )
+        }
         return (
           <div className="p-8 bg-muted/20">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
